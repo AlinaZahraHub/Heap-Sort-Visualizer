@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heap Sort Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-card">
+    <div class="header">
+        <h1>HEAP SORT VISUALIZER</h1>
+    </div>
+
+    <div class="control-panel">
+        <input type="number" id="inputVal" placeholder="Value">
+        <button id="addBtn">Insert Key</button>
+        
+        <select id="heapMode">
+            <option value="max">Max Heap (Ascending)</option>
+            <option value="min">Min Heap (Descending)</option>
+        </select>
+
+        <select id="speedSelect">
+            <option value="1000">Slow</option>
+            <option value="500" selected>Normal</option>
+            <option value="100">Fast</option>
+        </select>
+
+        <button id="sortBtn">Start Sort</button>
+        <button id="clearBtn">Clear All</button>
+    </div>
+
+    <div id="status" class="status-bar">System Live: Add nodes to start</div>
+
+    <div class="visualizer-area">
+        <div id="arrayDisplay"></div>
+        
+        <canvas id="treeCanvas" width="800" height="400"></canvas>
+        
+        <div class="legend">
+            <span><span class="dot fix"></span> Fixing</span> | 
+            <span><span class="dot swap"></span> Swapping</span> | 
+            <span><span class="dot sorted"></span> Sorted</span>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

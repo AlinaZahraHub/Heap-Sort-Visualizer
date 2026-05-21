@@ -1,0 +1,149 @@
+/* Rang-o-roghan aur variables */
+:root {
+    --navy-dark: #020617; 
+    --navy-mid: #0f172a; 
+    --steel-blue: #38bdf8;
+    --off-white: #f8fafc; 
+    --accent-red: #f43f5e; 
+    --accent-purple: #a855f7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: var(--navy-dark); 
+    display: flex; 
+    justify-content: center; 
+    padding: 40px 20px;
+}
+
+.main-card {
+    background-color: var(--off-white); 
+    width: 100%; 
+    max-width: 1000px;
+    border-radius: 20px; 
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+    overflow: hidden; 
+    border: 2px solid rgba(56, 189, 248, 0.4);
+}
+
+.header {
+    background-color: var(--navy-mid); 
+    color: white; 
+    padding: 20px;
+    text-align: center; 
+    border-bottom: 3px solid var(--steel-blue);
+}
+
+.control-panel {
+    padding: 20px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 15px; 
+    background-color: #f1f5f9; 
+    align-items: center;
+}
+
+.control-panel input, .control-panel select, .control-panel button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.control-panel input {
+    width: 120px;
+}
+
+#addBtn {
+    background: #0f172a; 
+    color: white; 
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#sortBtn {
+    background: var(--steel-blue); 
+    color: #0f172a;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#clearBtn {
+    background: #64748b; 
+    color: white; 
+    cursor: pointer;
+}
+
+.status-bar {
+    background: var(--navy-mid); 
+    color: var(--steel-blue);
+    padding: 12px; 
+    text-align: center; 
+    font-size: 0.85rem; 
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.visualizer-area {
+    padding: 30px; 
+    text-align: center;
+}
+
+#arrayDisplay {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 8px; 
+    margin-bottom: 25px;
+    min-height: 42px;
+}
+
+.node-box {
+    width: 40px; 
+    height: 40px; 
+    border: 2px solid var(--navy-mid);
+    background-color: white;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-weight: bold; 
+    border-radius: 8px; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+canvas {
+    width: 100%; 
+    height: auto; 
+    background: #ffffff; 
+    border: 1px solid #cbd5e1; 
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.legend {
+    margin-top: 20px; 
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+/* Legend Dots: Rangon ki nishani */
+.dot { 
+    height: 12px; 
+    width: 12px; 
+    border-radius: 50%; 
+    display: inline-block; 
+    margin-right: 5px; 
+    vertical-align: middle;
+}
+
+.fix { background: var(--accent-red); }
+.swap { background: var(--accent-purple); }
+.sorted { background: var(--steel-blue); }
